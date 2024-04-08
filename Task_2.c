@@ -52,14 +52,14 @@ int main(int argc, char *argv[]) {
 	//char* command = argv[1];
 
 	//char temp[1000];
-	char* tknPtr;
+	//char* tknPtr;
 
 	//int temp = 0;
 	struct node* treePtr = NULL;
     //printf("Enter the value of the new data member: ");
 	//scanf("%d", &temp);
 
-	tknPtr = strtok(argv[1],",");
+	char* tknPtr = strtok(argv[1],",");
 
     while (tknPtr != NULL)
     {
