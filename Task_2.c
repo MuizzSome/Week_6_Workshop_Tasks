@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 	//char* command = argv[1];
 
 	//char temp[1000];
-	char* tknPtr = NULL;
+	char* tknPtr;
 
 	//int temp = 0;
 	struct node* treePtr = NULL;
