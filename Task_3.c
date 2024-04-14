@@ -96,5 +96,36 @@ void sort_ascending(struct node **startPtr, int count_nodes)
     for (int i = 1; i < count_nodes; i++)
     {
 		//You may write your code here
+		prevPtr = NULL;
+        curPtr = *startPtr;
+
+        while (curPtr->nextPtr != temp2Ptr)
+        {
+            if (curPtr->data > curPtr->nextPtr->data)
+            {
+                if (prevPtr == NULL)
+                {
+                    tempPtr = curPtr->nextPtr->nextPtr;
+                    *startPtr = curPtr->nextPtr;
+                    (*startPtr)->nextPtr = curPtr;
+                    curPtr->nextPtr = tempPtr;
+                    prevPtr = *startPtr;
+                }
+                else
+                {
+                    tempPtr = curPtr->nextPtr->nextPtr;
+                    prevPtr->nextPtr = curPtr->nextPtr;
+                    prevPtr->nextPtr->nextPtr = curPtr;
+                    curPtr->nextPtr = tempPtr;
+                    prevPtr = prevPtr->nextPtr;
+                }
+            }
+            else
+            {
+                prevPtr = curPtr;
+                curPtr = curPtr->nextPtr;
+            }
+        }
+        temp2Ptr = curPtr;
 	}
 }
