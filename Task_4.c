@@ -9,6 +9,17 @@ original functionality?
 *******************************************************************************************************
 */
 
+/*
+Description of the compute_array() function:
+
+The compute_array() function takes a combined string as input, which consists of three parts: string_1, separator, and string_2.
+It computes an array of integers where each element represents the length of the longest prefix of string_2 that matches a suffix of the substring starting at the corresponding index in string_combined.
+The function iterates over the characters of string_combined, starting from index 1.
+For each index i, it initializes array_1[i] to 0 and then incrementally checks if the substring starting at index i in string_combined matches its corresponding prefix. It does this by comparing characters between string_combined[array_1[i]] and string_combined[i + array_1[i]]. It increments array_1[i] as long as the characters match and the index is within bounds.
+Finally, it returns the computed array array_1.
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
