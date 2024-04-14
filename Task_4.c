@@ -52,5 +52,6 @@ int main()
             printf("%d ", i - m - 1);
         }
     }
+    free(array_1);
     return 0;
 }
